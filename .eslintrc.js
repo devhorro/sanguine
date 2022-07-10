@@ -2,6 +2,7 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
+    jest: true,
   },
   extends: ["plugin:react/recommended", "airbnb"],
   parserOptions: {
@@ -13,7 +14,11 @@ module.exports = {
   },
   plugins: ["react"],
   rules: {
+    "linebreak-style": 0,
     semi: ["error", "always"],
     quotes: ["error", "double"],
+    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
+    "react/jsx-uses-react": "off",
+    "react/react-in-jsx-scope": "off",
   },
 };
